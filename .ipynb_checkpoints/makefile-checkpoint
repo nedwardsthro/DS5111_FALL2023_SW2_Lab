@@ -1,11 +1,14 @@
 default:
 	@cat makefile
 env:
-	pip install -r requirements.txt
-	source env/bin/activate
+	python3 -m venv env
+	. env/bin/activate; pip install -r requirements.txt
 
 run:
-	@python bin/clockdeco_param.py
+	. env/bin/activate; python3 bin/clockdeco_param.py
 .PHONY: tests
 tests:
 	pytest -vv tests
+
+lint:
+	pylint bin/perceptron.py
