@@ -5,6 +5,9 @@ class Perceptron():
     '''
     This is my docstring. This class is used to be in a test to see if the linting works. 
     '''
+    def __init__(self):
+        'This is a function docstring'
+        self._weights = None
     def train(self, inputs, labels):
         '''
         This module trains the model. It requires two inputs to the model:
